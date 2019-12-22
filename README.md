@@ -15,7 +15,7 @@ Based on the above relationship, we construct an equivalent Cox mixed model
 
 <img src="https://latex.codecogs.com/gif.latex?h({t_i}|{X_i},\;{G_i})&space;&&space;\;&space;=&space;\;{h_0}({t_i}){e^{X_i^Ta\;&space;&plus;&space;\;Z_i^T\delta&space;}},\;{\delta&space;_j}&space;&&space;\;\~\;N(0,\;{\rm{\sigma&space;}}_b^2)," title="h({t_i}|{X_i},\;{G_i}) & \; = \;{h_0}({t_i}){e^{X_i^Ta\; + \;Z_i^T\delta }},\;{\delta _j} & \;\~\;N(0,\;{\rm{\sigma }}_b^2)," />
 
-where **Z**<sub>*i*</sub> is the ith row vector of **K**<sup>1/2</sup> with **K** = **GG**<sup>*T*</sup>, which is often referred to as the genetic relationship matrix (GRM) in genetic prediction [18, 19, 28]; δ is an n-dimensional vector for the effect sizes of **Z**<sub>*i*</sub>.
+where **Z**<sub>*i*</sub> is the ith row vector of **K**<sup>1/2</sup> with **K** = **GG**<sup>*T*</sup>, which is often referred to as the genetic relationship matrix (GRM) in genetic prediction; ***δ*** is an n-dimensional vector for the effect sizes of **Z**<sub>*i*</sub>.
 
 ## Note
 The LRT procedure was finished in about 2013. At that time, the author (i.e., [Ping Zeng](https://github.com/biostatpzeng)) was a newer and was outside the door of statistical genetics. Thus, you will find that this procedure was not well designed. I put it here for a beautiful recall of that time.
