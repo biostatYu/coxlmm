@@ -4,9 +4,8 @@
 linear mixed effect Cox model with clinical covariates and gene expressions levels (coxlmm) is a [**R**](https://cran.r-project.org/) procedure to access the prognosis of different cancers and estimate the partition of clinical variance and genetic variance.
 
 Specifically, denote the observed survival time by *t<sub>i</sub>* and the true survival time by *T<sub>i</sub>* with di indicating the censored status, *X<sub>i</sub>* is a *p*-dimensional vector for available clinical covariates (e.g. disease stage, age and gender) for individual *i*, and *G<sub>i</sub>* be an *m*-dimensional vector for a set of gene expression levels for individual. To link the survival risk with the clinical information and all the genetic information, we employ Cox model within the framework of linear mixed models:
-$$
-<a href="https://www.codecogs.com/eqnedit.php?latex=h({t_i}|{X_i},\;{G_i})\;&space;=&space;\;{h_0}({t_i}){e^{X_i^Ta\;&space;&plus;&space;\;G_i^Tb}},\;{\rm{&space;}}{b_j}\;\~\;N(0,\;{\rm{\sigma&space;}}_b^2)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?h({t_i}|{X_i},\;{G_i})\;&space;=&space;\;{h_0}({t_i}){e^{X_i^Ta\;&space;&plus;&space;\;G_i^Tb}},\;{\rm{&space;}}{b_j}\;\~\;N(0,\;{\rm{\sigma&space;}}_b^2)" title="h({t_i}|{X_i},\;{G_i})\; = \;{h_0}({t_i}){e^{X_i^Ta\; + \;G_i^Tb}},\;{\rm{ }}{b_j}\;\~\;N(0,\;{\rm{\sigma }}_b^2)" /></a>
-$$
+<img src="https://latex.codecogs.com/gif.latex?h({t_i}|{X_i},\;{G_i})\;&space;=&space;\;{h_0}({t_i}){e^{X_i^Ta\;&space;&plus;&space;\;G_i^Tb}},\;{\rm{&space;}}{b_j}\;\~\;N(0,\;{\rm{\sigma&space;}}_b^2)\" title="h({t_i}|{X_i},\;{G_i})\; = \;{h_0}({t_i}){e^{X_i^Ta\; + \;G_i^Tb}},\;{\rm{ }}{b_j}\;\~\;N(0,\;{\rm{\sigma }}_b^2)\" />
+
 
 ***` y = Xa + Gb + e; b ~ N(0, sigam_g2), e ~　N(0, sigam_e2)　`***
 
