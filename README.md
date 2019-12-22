@@ -5,7 +5,7 @@ linear mixed effect Cox model with clinical covariates and gene expressions leve
 
 Specifically, denote the observed survival time by *t<sub>i</sub>* and the true survival time by *T<sub>i</sub>* with di indicating the censored status, *X<sub>i</sub>* is a *p*-dimensional vector for available clinical covariates (e.g. disease stage, age and gender) for individual *i*, and *G<sub>i</sub>* be an *m*-dimensional vector for a set of gene expression levels for individual. To link the survival risk with the clinical information and all the genetic information, we employ Cox model within the framework of linear mixed models:
 $$
-\h({t_i}|{X_i},\;{G_i})\; = \;{h_0}({t_i}){e^{X_i^Ta\; + \;G_i^Tb}},\;{\rm{ }}{b_j}\;\~\;N(0,\;{\rm{\sigma }}_b^2)\
+\[h({t_i}|{X_i},\;{G_i})\; = \;{h_0}({t_i}){e^{X_i^Ta\; + \;G_i^Tb}},\;{\rm{ }}{b_j}\;\~\;N(0,\;{\rm{\sigma }}_b^2)\]
 $$
 
 ***` y = Xa + Gb + e; b ~ N(0, sigam_g2), e ~　N(0, sigam_e2)　`***
