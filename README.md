@@ -38,4 +38,4 @@ The LRT procedure was finished in about 2013. At that time, the author (i.e., [P
 
 
 ## Contact
-I am very grateful to any questions, comments, or bugs reports; and please contact [Ping Zeng](https://github.com/biostatpzeng) via zpstat@xzhmu.edu.cn or ~~pingzeng@umich.edu~~.
+I am very grateful to any questions, comments, or bugs reports; and please contact [Ping Zeng](https://github.com/biostatpzeng) via zpstat@xzhmu.edu.cn or [Xinghao Yu](https://github.com/biostatyu) via xinghaoyu@stu.xzhmu.edu.cn.
