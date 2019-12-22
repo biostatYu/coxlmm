@@ -12,8 +12,11 @@ LRT examines the association of ***G*** with ***y*** (while controling for ***X*
 
 ***` H0: b = 0; <==>, H0: sigam_g2 = 0 `***
 
-The LRT statistic is defined as the difference of log-likelihood value between the null model (i.e. y = Xa + e) and the alternative model (i.e. y = Xa + Gb + e). Due to the limited parameter space of sigam_g2, obtaining the null distribution of the LRT statistic is not trivial. We use the method of spectral decomposition proposed by Crainiceanu & Ruppert [(2004)](http://onlinelibrary.wiley.com/wol1/doi/10.1111/j.1467-9868.2004.00438.x/abstract) to generate the exact finite sample null distribution (implemented via the [**R**](https://cran.r-project.org/) package [RLRsim](https://github.com/fabian-s/RLRsim)).
-
+The coxlmm model (6) is fitted with the R coxme (version 2.2-10) package , in which the Laplace approximation method is implemented based on the second order Taylor series. However, fitting coxlmm with coxme directly is time-consuming due to the high-dimensional problem. Instead, we fit coxlmm in an efficient alternative way. Specifically, note that the genetic component <img src="https://latex.codecogs.com/gif.latex?G_i^Tb" title="G_i^Tb" /> can be re-expressed as
+<img src="https://latex.codecogs.com/gif.latex?{u_i}\;&space;=&space;\;G_i^Tb\;\~\;N(0,\;G_i^T{G_i}{\rm{\sigma&space;}}_b^2)" title="{u_i}\; = \;G_i^Tb\;\~\;N(0,\;G_i^T{G_i}{\rm{\sigma }}_b^2)" />
+Based on the above relationship, we construct an equivalent Cox mixed model
+<img src="https://latex.codecogs.com/gif.latex?h({t_i}|{X_i},\;{G_i})&space;&&space;\;&space;=&space;\;{h_0}({t_i}){e^{X_i^Ta\;&space;&plus;&space;\;Z_i^T\delta&space;}},\;{\delta&space;_j}&space;&&space;\;\~\;N(0,\;{\rm{\sigma&space;}}_b^2)," title="h({t_i}|{X_i},\;{G_i}) & \; = \;{h_0}({t_i}){e^{X_i^Ta\; + \;Z_i^T\delta }},\;{\delta _j} & \;\~\;N(0,\;{\rm{\sigma }}_b^2)," />
+proposed by Crainiceanu & Ruppert [(2004)](http://onlinelibrary.wiley.com/wol1/doi/10.1111/j.1467-9868.2004.00438.x/abstract) to generate the exact finite sample null distribution (implemented via the [**R**](https://cran.r-project.org/) package [coxme](https://github.com/fabian-s/RLRsim)).
 
 ## Note
 The LRT procedure was finished in about 2013. At that time, the author (i.e., [Ping Zeng](https://github.com/biostatpzeng)) was a newer and was outside the door of statistical genetics. Thus, you will find that this procedure was not well designed. I put it here for a beautiful recall of that time.
