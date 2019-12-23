@@ -9,7 +9,7 @@ Specifically, denote the observed survival time by *t<sub>i</sub>* and the true 
 </div>
 
 where <img src="https://latex.codecogs.com/gif.latex?{\rm{\sigma&space;}}_b^2" title="{\rm{\sigma }}_b^2" /> is the variance for gene expressions 
-The coxlmm model (6) is fitted with the R coxme (version 2.2-10) package (https://CRAN.R-project.org/package=coxme), in which the Laplace approximation method is implemented based on the second order Taylor series. However, fitting coxlmm with coxme directly is time-consuming due to the high-dimensional problem. Instead, we fit coxlmm in an efficient alternative way. Specifically, note that the genetic component <img src="https://latex.codecogs.com/gif.latex?G_i^Tb" title="G_i^Tb" /> can be re-expressed as
+The coxlmm model is fitted with the R coxme (version 2.2-10) package (https://CRAN.R-project.org/package=coxme), in which the Laplace approximation method is implemented based on the second order Taylor series. However, fitting coxlmm with coxme directly is time-consuming due to the high-dimensional problem. Instead, we fit coxlmm in an efficient alternative way. Specifically, note that the genetic component <img src="https://latex.codecogs.com/gif.latex?G_i^Tb" title="G_i^Tb" /> can be re-expressed as
 
 <div align=center><img src="https://latex.codecogs.com/gif.latex?{u_i}\;&space;=&space;\;G_i^Tb\;\~\;N(0,\;G_i^T{G_i}{\rm{\sigma&space;}}_b^2)" title="{u_i}\; = \;G_i^Tb\;\~\;N(0,\;G_i^T{G_i}{\rm{\sigma }}_b^2)" />
 </div>
