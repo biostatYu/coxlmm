@@ -21,19 +21,20 @@ Based on the above relationship, we construct an equivalent Cox mixed model
 
 where **Z**<sub>*i*</sub> is the ith row vector of **K**<sup>1/2</sup> with **K** = **GG**<sup>*T*</sup>, which is often referred to as the genetic relationship matrix (GRM) in genetic prediction; ***δ*** is an n-dimensional vector for the effect sizes of **Z**<sub>*i*</sub>.
 
-## Note
-The LRT procedure was finished in about 2013. At that time, the author (i.e., [Ping Zeng](https://github.com/biostatpzeng)) was a newer and was outside the door of statistical genetics. Thus, you will find that this procedure was not well designed. I put it here for a beautiful recall of that time.
-
-#### A new LRT R function, named [ReLRT](https://github.com/biostatpzeng/LRT/blob/master/ReLRT.R), was recently rewritten. We applied [ReLRT](https://github.com/biostatpzeng/LRT/blob/master/ReLRT.R) to detect eGenes in gene expression data using cis-SNPs.  [ReLRT](https://github.com/biostatpzeng/LRT/blob/master/ReLRT.R) esimates the linear mixed models basde on lme function in R package [nlme](https://cran.r-project.org/web/packages/nlme/index.html) and thus is more efficient than pervious [LRT](https://github.com/biostatpzeng/LRT/blob/master/LRT.R). [ReLRT](https://github.com/biostatpzeng/LRT/blob/master/ReLRT.R) also perfroms the approximate LRT (aLRT) using a mixture null distribution. We call the original LRT via the simulation-based algrithmn exact LRT (eLRT). 
 
 ## References
 
-+ Fabian Scheipl, Sonja Greven and Helmut Küchenhoff. Size and power of tests for a zero random effect variance or polynomial regression in additive and linear mixed models. Computational Statistics & Data Analysis, 2008, 52(7): 3283-3299. [DOI: 10.1016/j.csda.2007.10.022](http://www.sciencedirect.com/science/article/pii/S0167947307004306)
++ Ripatti S, Palmgren J. Estimation of multivariate frailty models using penalized partial likelihood[J]. Biometrics, 2000, 56(4): 1016-1022. [DOI: 10.1111/j.0006-341X.2000.01016.x](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.0006-341X.2000.01016.x)
+
++ Therneau T M, Grambsch P M, Pankratz V S. Penalized survival models and frailty[J]. Journal of computational and graphical statistics, 2003, 12(1): 156-175. [DOI: 10.1198/1061860031365](https://amstat.tandfonline.com/doi/abs/10.1198/1061860031365#.XgARlkczYdU)
 
 + R Core Team. R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria, 2013 (https://www.R-project.org/). 
 
 ## Cite
-#### [Ping Zeng](https://github.com/biostatpzeng), Yang Zhao, Jin Liu, Liya Liu, Liwei Zhang, Ting Wang, Shuiping Huang and Feng Chen. Likelihood Ratio Tests in Rare Variant Detection for Continuous Phenotypes. Annals of Human Genetics, 2014, 78(5): 320-332. [DOI: 10.1111/ahg.12071](http://onlinelibrary.wiley.com/wol1/doi/10.1111/ahg.12071/abstract) 
+
+
+
+
 
 
 ## Contact
