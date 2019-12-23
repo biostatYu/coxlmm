@@ -4,6 +4,7 @@
 **[coxlmm](https://github.com/biostatYu/coxlmm/blob/master/coxlmm.R)** requires ***y*** (survival information (https://github.com/biostatpzeng/LRT/blob/master/phenotype.fam)), ***X*** (clinical variable (https://github.com/biostatYu/coxlmm/blob/master/example/x.txt)) and ***G*** (gene expression levels (https://github.com/biostatYu/coxlmm/blob/master/example/g.txt)). It first computes the ***K*** matrix: ***K*** = GG^T (a n by n matrix measureed the similarity of individuals). For the input data, no missing data is allowed. So, missing data should be removed before data analysis.
 
 ## model fit of prognosis with *coxlmm* (linear mixed effect Cox model with clinical covariates and gene expressions levels)
+```
 x = read.table("x.txt", header = T) #survival time and status
 y = read.table("y.txt", header = T) #clinical covariates
 g = read.table("g.txt", header = T) #gene expression levels
@@ -55,9 +56,10 @@ $lp #linear prediction
 [3,] -15.374094
 [4,]  59.643957
 [5,] -40.368868
+```
 
 ## prediction of prognosis with *coxlmm*
-
+```
 predict = coxlmm_pred(y,x,g,fit)
 $lpnew # linear prediction with test data
            [,1]
@@ -69,9 +71,10 @@ $lpnew # linear prediction with test data
 
 $cindex #concordance index
 [1] 1
+```
 
 ## estimation of the partition of clinical variance and genetic variance
-
+```
 PVE.est = PVE(y,x,g,fit)
 $G1
          [,1]
@@ -88,6 +91,6 @@ $PCE # proportion of clinical variable
 $PGE # proportion of gene expression levels
              [,1]
 [1,] 3.127008e-25
-
+```
 
 
